@@ -1,0 +1,19 @@
+body{
+  background: lightblue;
+
+  .single.single-books{
+    .topBar{
+      display: flex;
+      justify-content: space-between;
+
+      nav a{
+        padding: 3px 9px;
+        border-right: 1px solid #ccc;
+
+        &:last-child{
+          border-right-width: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+  <%- include('../../partials/header'); %>
+</header>
+
+<main class="single single-books">
+  <div class="jumbotron">
+    <div class="topBar">
+      <a href="/books/<%= book.id %>/"><%= book.title %></a>
+      <nav>
+        <% if( chapterNav.prev ) { %>
+          <a href="/books/<%= book.id %>/<%= chapterNav.prev.id %>">
+            < <%= chapterNav.prev.title %>
+          </a>
+        <% } %>
+        <% if( chapterNav.next ) { %>
+          <a href="/books/<%= book.id %>/<%= chapterNav.next.id %>">
+            <%= chapterNav.next.title %> >
+          </a>
+        <% } %>
+      </nav>
+    </div>
+    <%- include('../../components/h1', {content: title}) %> 
+    <div class="content">
+      <%= content %>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <%- include('../../partials/footer'); %>
+</footer>
+
+</body>
+</html>

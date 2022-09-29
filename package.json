@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "sass": "sass --watch ./app/public/assets/scss/main.scss:./app/public/assets/css/main.css  --style compressed",
     "dev": "nodemon server.js",
     "test": "jest --runInBand --detectOpenHandles --forceExit"
   },

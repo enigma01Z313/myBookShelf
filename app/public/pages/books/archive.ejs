@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+  <%- include('../../partials/header'); %>
+</header>
+
+<main>
+  <div class="jumbotron">
+    <%- include('../../components/h1', {content: title}) %> 
+    <ul>
+      <% chapters.forEach(function(chapter) { %>
+        <li>
+          <a href="/books/<%= bookId %>/<%= chapter.id %>"><%= chapter.title %></a>
+        </li>
+      <% }); %>
+    </ul>
+  </div>
+</main>
+
+<footer>
+  <%- include('../../partials/footer'); %>
+</footer>
+
+</body>
+</html>
